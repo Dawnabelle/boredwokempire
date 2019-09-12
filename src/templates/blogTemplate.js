@@ -15,6 +15,9 @@ export default function Template({
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+      <script>
+        console.log(slug);
+      </script>
       </div>
     </div>
   )
