@@ -1,17 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Bored Wok Empire`,
-    siteUrl: `https://www.gatsbyjs.org`,
-    description: `Thoughts from tweets`,
+    title: 'Bored Wok Empire',
+    description: 'Thoughts that could be tweets',
   },
   plugins: [
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/markdown-pages`,
-        name: `markdown-pages`,
+        name: `pages`,
+        path: `${__dirname}/src/pages`
       },
     },
-    `gatsby-transformer-remark`,
   ]
 }
