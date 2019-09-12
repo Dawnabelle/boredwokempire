@@ -1,18 +1,17 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.org/docs/gatsby-config/
- */
-
 module.exports = {
-  plugins: [
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `markdown-pages`,
-      path: `${__dirname}/src/markdown-pages`,
-    },
+  siteMetadata: {
+    title: `Bored Wok Empire`,
+    siteUrl: `https://www.gatsbyjs.org`,
+    description: `Thoughts from tweets`,
   },
-  `gatsby-transformer-remark`,
-]
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown-pages`,
+        name: `markdown-pages`,
+      },
+    },
+    `gatsby-transformer-remark`,
+  ]
 }
