@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import Header from '../components/Header'
 import Templates from '../templates/blogPost'
 const Layout = ({data}) => {
@@ -16,12 +16,13 @@ const Layout = ({data}) => {
           {edges.map(edge => {
             const {frontmatter} = edge.node
             return (
-              <div
+              <Link
                 style={{marginBottom: '1rem'}}
                 key={frontmatter.path}
+                to={frontmatter.path}
               >
                 {frontmatter.title}
-              </div>
+              </Link>
             )
           })}
         </div>
