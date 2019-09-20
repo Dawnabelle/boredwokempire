@@ -7,7 +7,13 @@ export default function Template(props) {
   // const { markdownRemark } = data // data.markdownRemark holds our post data
   // const { frontmatter, html } = markdownRemark
   return (
-    <div className="blog-post-container">
+    <div className="blog-post-container" style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        fontFamily: 'avenir',
+        textAlign: 'center'
+      }}>
       <div className="blog-post">
         <h1>{title}</h1>
         <h2>{date}</h2>
